@@ -6,173 +6,35 @@
   <title>Windsor & Nova Apartment Owners Association</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #f2f7f4, #e0f0ea);
-      color: #333;
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 20px;
-    }
-
-    .header {
-      background: #8cc8ae;
-      color: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      flex-wrap: wrap;
-    }
-
-    .header img {
-      max-width: 80px;
-      height: auto;
-    }
-
-    .header-text {
-      flex: 1;
-      min-width: 200px;
-    }
-
-    .header h1 {
-      font-size: 1.8rem;
-      margin-bottom: 5px;
-    }
-
-    .header p {
-      font-size: 1rem;
-      color: #e9f5f0;
-    }
-
-    .section {
-      background: #ffffff;
-      margin-top: 30px;
-      display: flex;
-      flex-wrap: wrap;
-      border-radius: 12px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
-      overflow: hidden;
-      border: 1px solid #d3e2dc;
-    }
-
-    .left, .right {
-      flex: 1;
-      padding: 25px;
-      min-width: 300px;
-      border-right: 1px solid #e0e0e0;
-    }
-
+    body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(to bottom, #f2f7f4, #e0f0ea); color: #333; line-height: 1.6; }
+    .container { max-width: 1100px; margin: 40px auto; padding: 20px; }
+    .header { background: #8cc8ae; color: #fff; padding: 20px; border-radius: 12px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    .header img { max-width: 80px; height: auto; }
+    .header-text { flex: 1; min-width: 200px; }
+    .header h1 { font-size: 1.8rem; margin-bottom: 5px; }
+    .header p { font-size: 1rem; color: #e9f5f0; }
+    nav { margin-top: 15px; text-align: center; }
+    nav a { margin: 0 10px; color: #fff; background: #679f88; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; }
+    nav a:hover { background: #5a8c79; }
+    .section, .full-width-section { background: #ffffff; margin-top: 30px; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.05); border: 1px solid #d3e2dc; overflow: hidden; }
+    .section { display: flex; flex-wrap: wrap; }
+    .left, .right { flex: 1; padding: 25px; min-width: 300px; border-right: 1px solid #e0e0e0; }
     .right { border-right: none; }
-
-    .president-box {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      align-items: flex-start;
-    }
-
-    .president-photo img {
-      max-width: 140px;
-      border-radius: 10px;
-      border: 2px solid #ccc;
-    }
-
-    .president-message h3 {
-      margin: 0;
-      color: #2a4f3f;
-    }
-
-    .president-message p {
-      font-size: 0.95rem;
-      margin-top: 10px;
-    }
-
-    .members-list {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .member {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .member img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 1px solid #ccc;
-    }
-
-    h2 {
-      font-size: 1.3rem;
-      margin-bottom: 15px;
-      color: #3e715b;
-      border-bottom: 1px solid #c5ded2;
-      padding-bottom: 5px;
-    }
-
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-
-    ul li {
-      margin-bottom: 8px;
-    }
-
-    a {
-      text-decoration: none;
-      color: #2b7a78;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .full-width-section {
-      background: #ffffff;
-      margin-top: 30px;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
-      border: 1px solid #d3e2dc;
-    }
-
-    .event-img {
-      margin-top: 15px;
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
-
+    h2 { font-size: 1.3rem; margin-bottom: 15px; color: #3e715b; border-bottom: 1px solid #c5ded2; padding-bottom: 5px; }
+    ul { list-style-type: disc; padding-left: 20px; }
+    ul li { margin-bottom: 8px; }
+    a { text-decoration: none; color: #2b7a78; }
+    a:hover { text-decoration: underline; }
     @media (max-width: 768px) {
       .header { flex-direction: column; text-align: center; }
       .header img { margin: 0 auto; }
-      .president-box { flex-direction: column; align-items: center; text-align: center; }
-      .left, .right {
-        border-right: none !important;
-        border-bottom: 1px solid #eee;
-      }
+      .left, .right { border-right: none !important; border-bottom: 1px solid #eee; }
       .section:last-child .right { border-bottom: none; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-
     <!-- Header -->
     <div class="header">
       <img src="logo.png" alt="Society Logo" />
@@ -181,73 +43,18 @@
         <p>Shipra Sun City, Indirapuram, Ghaziabad</p>
       </div>
     </div>
-
-    <!-- President & Office Bearers -->
-    <div class="section">
-      <div class="left">
-<div class="president-box" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px;">
-
-  <!-- President -->
-  <div style="flex: 1; min-width: 280px; background: #f8fdfb; padding: 15px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.05);">
-    <div style="text-align: center;">
-      <img src="abhishek.jpg" alt="President" style="width: 100px; border-radius: 50%; border: 2px solid #ccc;">
-      <h3 style="margin-top: 10px;">डॉ. अभिषेक भदौरिया</h3>
-      <p><strong>President</strong></p>
-    </div>
-    <p style="font-size: 0.92rem; margin-top: 10px; text-align: justify;">
-      अध्यक्ष का संदेश: हमारे विंडसर एवं नोवा अपार्टमेंट्स के सभी निवासियों को मेरा हार्दिक अभिवादन। यह टाउनशिप सिर्फ इमारतों का समूह नहीं, बल्कि एक परिवार है जहाँ हम सौहार्द, सुरक्षा और पारदर्शिता के साथ मिलकर आगे बढ़ रहे हैं। हमारा लक्ष्य है कि संवाद, सहयोग और भागीदारी के ज़रिए इस समाज को और भी सुंदर, सुरक्षित और आदर्श बनाया जाए।
-    </p>
-  </div>
-
-  <!-- Secretary -->
-  <div style="flex: 1; min-width: 280px; background: #f8fdfb; padding: 15px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.05);">
-    <div style="text-align: center;">
-      <img src="rakesh.jpg" alt="Secretary" style="width: 100px; border-radius: 50%; border: 2px solid #ccc;">
-      <h3 style="margin-top: 10px;">राकेश गंगवार</h3>
-      <p><strong>Secretary</strong></p>
-    </div>
-    <p style="font-size: 0.92rem; margin-top: 10px; text-align: justify;">
-      सचिव का संदेश: निवासियों के सहयोग से ही हम हर कार्य को सुचारू रूप से संचालित कर पाते हैं। आप सभी का सहयोग ही हमारी शक्ति है। किसी भी सुझाव या समस्या के लिए बेझिझक संपर्क करें।
-    </p>
-  </div>
-
-  <!-- Treasurer -->
-  <div style="flex: 1; min-width: 280px; background: #f8fdfb; padding: 15px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.05);">
-    <div style="text-align: center;">
-      <img src="vijay.jpg" alt="Treasurer" style="width: 100px; border-radius: 50%; border: 2px solid #ccc;">
-      <h3 style="margin-top: 10px;">विजय पाल मलिक</h3>
-      <p><strong>Treasurer</strong></p>
-    </div>
-    <p style="font-size: 0.92rem; margin-top: 10px; text-align: justify;">
-      कोषाध्यक्ष का संदेश: हम समाज के प्रत्येक पैसे का सदुपयोग कर रहे हैं। वित्तीय पारदर्शिता हमारी प्राथमिकता है और सभी रिपोर्ट समय पर साझा की जाती हैं।
-    </p>
-  </div>
-
-</div>
-
-        </div>
-      </div>
-      <div class="right">
-        <h2>Other Office Bearers & Board Members</h2>
-        <div class="members-list">
-          <div class="member"><img src="tapan.jpg"><span><strong>Vice President:</strong> Tapan Verma</span></div>
-          <div class="member"><img src="manu.jpg"><span><strong>Vice Treasurer:</strong> Manu Tiwari</span></div>
-          <div class="member"><img src="shushma.jpg"><span><strong>Vice Secretary:</strong> Sushma Gangwar</span></div>
-          <div class="member"><img src="pritam.jpg"><span><strong>Board Member:</strong> Pritam Panwar</span></div>          
-          <div class="member"><img src="nisha.jpg"><span><strong>Board Member:</strong> Nisha Gupta</span></div>
-          <div class="member"><img src="anuj.jpg"><span><strong>Board Member:</strong> Anuj Agrawal</span></div>
-          <div class="member"><img src="balayan.jpg"><span><strong>Board Member:</strong> C.P. Balyan</span></div>
-
-        </div>
-      </div>
-    </div>
+    <!-- Navigation -->
+    <nav>
+      <a href="board.html">Board Members</a>
+    </nav>
 
     <!-- Events -->
     <div class="full-width-section">
-      <h2>Upcoming Events .. </h2>
+      <h2>Upcoming Events</h2>
+      <!-- Event details here -->
     </div>
 
-    <!-- Security & Maintenance -->
+    <!-- Other Sections (Security, Maintenance, Finance, Notices) -->
     <div class="section">
       <div class="left">
         <h2>Security and Vehicle related</h2>
@@ -258,12 +65,10 @@
       </div>
       <div class="right">
         <h2>Maintenance Related</h2>
-        <ul>
-        </ul>
+        <ul></ul>
       </div>
     </div>
 
-    <!-- Finance & Forms -->
     <div class="section">
       <div class="left">
         <h2>Financials</h2>
@@ -275,12 +80,10 @@
       </div>
       <div class="right">
         <h2>Forms & Contracts</h2>
-        <ul>
-        </ul>
+        <ul></ul>
       </div>
     </div>
 
-    <!-- Notices -->
     <div class="full-width-section">
       <h2>Notices</h2>
       <p>📌 No active notices at this time. Please check back later or contact the secretary for more information.</p>
