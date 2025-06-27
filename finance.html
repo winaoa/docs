@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Society Financial Summary</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background-color: #f4f4f9; }
+    .container { width: 90%; max-width: 1000px; margin: auto; padding: 20px; background: #fff; border-radius: 8px; }
+    h1, h2 { color: #2c3e50; }
+    h1 { border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+    ul { list-style-type: none; padding: 0; }
+    li { margin: 10px 0; }
+    a { color: #2980b9; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .section { margin-top: 40px; }
+    .highlight { background: #eaf7ff; padding: 10px; border-left: 4px solid #3498db; margin: 10px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+    th { background: #3498db; color: white; }
+    .fund-box { background: #dff9fb; padding: 15px; border-left: 6px solid #130f40; margin: 20px 0; }
+    .qa { background: #f6e58d; padding: 15px; border-left: 6px solid #f39c12; margin: 20px 0; }
+    .lang-select { margin-bottom: 20px; }
+    .lang-select button { margin-right: 10px; padding: 8px 12px; cursor: pointer; border: none; background-color: #2980b9; color: white; border-radius: 4px; }
+    .lang-select button:hover { background-color: #1c5a86; }
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+  </style>
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-content').forEach(div => div.classList.remove('active'));
+      document.getElementById(lang).classList.add('active');
+    }
+    window.onload = () => switchLang('english');
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="lang-select">
+      <strong>Select Language:</strong>
+      <button onclick="switchLang('english')">English</button>
+      <button onclick="switchLang('hindi')">हिन्दी</button>
+    </div>
+
+    <div id="english" class="lang-content">
+      <h1>Society Financial Summary</h1>
+      <h2>Monthly Income & Expenses</h2>
+      <table>
+        <tr><th>Category</th><th>Amount (₹)</th></tr>
+        <tr><td>Maintenance Income (Ideal)</td><td>₹22,20,150</td></tr>
+        <tr><td>Maintenance Income (after ₹2L defaulters)</td><td>₹20,20,150</td></tr>
+        <tr><td>Other Monthly Income</td><td>₹1,00,000</td></tr>
+        <tr><th>Total Income</th><th>₹21,20,150</th></tr>
+      </table>
+      <table>
+        <tr><th>Expense Head</th><th>Amount (₹)</th></tr>
+        <tr><td>Electricity</td><td>₹6,00,000</td></tr>
+        <tr><td>Security</td><td>₹7,50,000</td></tr>
+        <tr><td>Maintenance</td><td>₹12,00,000</td></tr>
+        <tr><td>Office Staff + Legal</td><td>₹1,13,000</td></tr>
+        <tr><th>Total Expenses</th><th>₹26,63,000</th></tr>
+      </table>
+
+      <h2>Fund Overview</h2>
+      <div class="fund-box">
+        <strong>Maintenance Fund:</strong><br>
+        Monthly collection of ₹22.2 lakh (if no defaulters). Defaulters reduce this by ₹2 lakh monthly.
+      </div>
+      <div class="fund-box">
+        <strong>Other Income:</strong><br>
+        Includes rental income, advertisement, or common facility use – approximately ₹1 lakh per month.
+      </div>
+      <div class="fund-box">
+        <strong>0.5% Transfer Fund (Infrastructure Reserve):</strong><br>
+        Collected from flat sale transfer fees. Previously used ₹1–1.25 crore to manage deficits by previous Board in last 2 years.<br>
+        Current balance: ₹54 lakh – Can sustain us for 8–10 months only.<br>
+        Monthly new collection in the fund is around ₹2 lakh (assuming 5–6 flats are resold every month).
+      </div>
+      <div class="fund-box">
+        <strong>Sinking Fund:</strong><br>
+        Total: ₹87 lakh<br>
+        Strictly reserved for major infrastructure fixes (e.g., underground cables). Cannot be used for day-to-day maintenance.
+      </div>
+
+      <h2>Understanding the Deficit</h2>
+      <div class="highlight">
+        Even after all recovery efforts, we face a minimum monthly deficit of ₹3.4 lakh, rising to ₹5.4 lakh with defaulters.
+      </div>
+
+      <h2>Recommended Actions</h2>
+      <ul>
+        <li>Improve recovery from defaulters (₹2 lakh/month)</li>
+        <li>Consider reviewing maintenance charges</li>
+        <li>Limit non-essential expenses</li>
+        <li>Protect sinking and reserve funds for emergencies</li>
+        <li>Promote community engagement and transparency</li>
+      </ul>
+
+      <h2>Q&A</h2>
+      <div class="qa">
+        <strong>Q1. Why can't we use the sinking fund to cover monthly expenses?</strong><br>
+        A: The sinking fund is legally and financially reserved for large infrastructure repairs only.
+      </div>
+      <div class="qa">
+        <strong>Q2. What happens after the ₹54 lakh reserve is used up?</strong><br>
+        A: We may face service disruptions or need to urgently raise maintenance unless corrective action is taken now.
+      </div>
+      <div class="qa">
+        <strong>Q3. How long can we continue current spending?</strong><br>
+        A: At the current rate, the reserve can support expenses for 8–10 months.
+      </div>
+      <div class="qa">
+        <strong>Q4. Can maintenance charges be revised without consensus?</strong><br>
+        A: Any revision would follow discussion in GBMs and approval by majority.
+      </div>
+    </div>
+
+    <div id="hindi" class="lang-content">
+      <h1>सोसाइटी वित्तीय सारांश</h1>
+      <h2>मासिक आय और खर्च</h2>
+      <table>
+        <tr><th>श्रेणी</th><th>राशि (₹)</th></tr>
+        <tr><td>मेंटेनेंस आय (आदर्श)</td><td>₹22,20,150</td></tr>
+        <tr><td>मेंटेनेंस आय (₹2 लाख डिफॉल्टर के बाद)</td><td>₹20,20,150</td></tr>
+        <tr><td>अन्य मासिक आय</td><td>₹1,00,000</td></tr>
+        <tr><th>कुल मासिक आय</th><th>₹21,20,150</th></tr>
+      </table>
+      <table>
+        <tr><th>खर्च का शीर्ष</th><th>राशि (₹)</th></tr>
+        <tr><td>बिजली</td><td>₹6,00,000</td></tr>
+        <tr><td>सुरक्षा</td><td>₹7,50,000</td></tr>
+        <tr><td>मेंटेनेंस</td><td>₹12,00,000</td></tr>
+        <tr><td>ऑफिस स्टाफ + लीगल</td><td>₹1,13,000</td></tr>
+        <tr><th>कुल मासिक खर्च</th><th>₹26,63,000</th></tr>
+      </table>
+
+      <h2>फंड का अवलोकन</h2>
+      <div class="fund-box">
+        <strong>मेंटेनेंस फंड:</strong><br>
+        यदि कोई डिफॉल्टर न हो तो मासिक रूप से ₹22.2 लाख। डिफॉल्टर की स्थिति में ₹2 लाख कम हो जाते हैं।
+      </div>
+      <div class="fund-box">
+        <strong>अन्य आय:</strong><br>
+        किराया, विज्ञापन या अन्य सामान्य उपयोग से – लगभग ₹1 लाख मासिक।
+      </div>
+      <div class="fund-box">
+        <strong>0.5% ट्रांसफर फंड (इन्फ्रास्ट्रक्चर रिज़र्व):</strong><br>
+        फ्लैट बिक्री पर वसूली गई 0.5% फीस से एकत्र। पिछले दो वर्षों में ₹1–1.25 करोड़ का उपयोग घाटा भरने हेतु किया गया।<br>
+        वर्तमान शेष राशि: ₹54 लाख – यह 8–10 महीने का घाटा संभाल सकती है।<br>
+        मासिक नया संग्रह: ₹2 लाख (यदि हर महीने 5–6 फ्लैट पुनः बिकते हैं तो)।
+      </div>
+      <div class="fund-box">
+        <strong>सिंकिंग फंड:</strong><br>
+        कुल: ₹87 लाख<br>
+        केवल बड़ी अधोसंरचना मरम्मत (जैसे अंडरग्राउंड केबल्स) हेतु आरक्षित। नियमित खर्च में उपयोग वर्जित है।
+      </div>
+
+      <h2>घाटे की स्थिति</h2>
+      <div class="highlight">
+        सभी बकाया वसूली के बाद भी न्यूनतम ₹3.4 लाख मासिक घाटा रहता है, जो डिफॉल्टर की स्थिति में ₹5.4 लाख तक बढ़ जाता है।
+      </div>
+
+      <h2>सिफारिशें</h2>
+      <ul>
+        <li>डिफॉल्टर से वसूली बेहतर करें (₹2 लाख/माह)</li>
+        <li>मेंटेनेंस शुल्क की समीक्षा करें</li>
+        <li>गैर-जरूरी खर्च सीमित करें</li>
+        <li>सिंकिंग व रिज़र्व फंड को आपात स्थिति हेतु सुरक्षित रखें</li>
+        <li>समुदाय की भागीदारी और पारदर्शिता बढ़ाएं</li>
+      </ul>
+
+      <h2>प्रश्नोत्तर</h2>
+      <div class="qa">
+        <strong>प्र.1: क्या हम सिंकिंग फंड से मासिक खर्च चला सकते हैं?</strong><br>
+        उत्तर: यह फंड केवल बड़ी अधोसंरचना मरम्मत हेतु आरक्षित है। नियम अनुसार इसका उपयोग नियमित खर्चों में नहीं हो सकता।
+      </div>
+      <div class="qa">
+        <strong>प्र.2: ₹54 लाख का फंड समाप्त होने पर क्या होगा?</strong><br>
+        उत्तर: सेवाओं में व्यवधान आ सकता है या फिर तत्काल मेंटेनेंस शुल्क बढ़ाने की आवश्यकता होगी।
+      </div>
+      <div class="qa">
+        <strong>प्र.3: वर्तमान खर्च के साथ हम कितने महीने और चल सकते हैं?</strong><br>
+        उत्तर: मौजूदा दर पर यह फंड लगभग 8–10 महीने का खर्च सहन कर सकता है।
+      </div>
+      <div class="qa">
+        <strong>प्र.4: क्या मेंटेनेंस शुल्क बिना सहमति के बढ़ाया जा सकता है?</strong><br>
+        उत्तर: नहीं, कोई भी संशोधन GBM में चर्चा और बहुमत की मंजूरी के बाद ही होगा।
+      </div>
+    </div>
+  </div>
+</body>
+</html>
