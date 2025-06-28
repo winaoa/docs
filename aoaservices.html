@@ -2,19 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RWA Office Services</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
     .container { max-width: 800px; margin: 20px auto; padding: 0 15px; }
-    h1 { text-align: center; margin-bottom: 1em; color: #2c3e50; }
+    h1 { text-align: center; margin-bottom: 0.5em; color: #2c3e50; }
+    nav { background: #fff; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    nav ul { list-style: none; padding-left: 0; }
+    nav li { margin-bottom: 0.5em; }
+    nav a { color: #1abc9c; text-decoration: none; }
     section { background: #fff; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
     section h2 { color: #1abc9c; margin-top: 0; }
     ul { padding-left: 1.2em; }
     li { margin-bottom: 0.5em; }
+    a.form-link { font-weight: bold; }
     @media (max-width: 600px) {
       .container { padding: 0 10px; }
-      section { padding: 10px; }
+      nav, section { padding: 10px; }
     }
   </style>
 </head>
@@ -22,26 +27,43 @@
   <div class="container">
     <h1>RWA Office Services to Residents</h1>
 
-    <section>
-      <h2>When You Buy a Flat</h2>
+    <!-- INDEX -->
+    <nav id="index">
+      <h2>Index</h2>
       <ul>
+        <li><a href="#buy-flat">1. When You Buy a Flat</a></li>
+        <li><a href="#rent-flat">2. When You Rent an Apartment</a></li>
+        <li><a href="#leaving">3. Somebody Leaving the Society</a></li>
+        <li><a href="#work-permit-flat">4. Work Permit in the Flat</a></li>
+        <li><a href="#block-work-permit">5. Work Permit in the Block Building</a></li>
+        <li><a href="#maid-pass">6. Maid Pass</a></li>
+        <li><a href="#security-refund">7. Security Refund</a></li>
+        <li><a href="#malva-removal">8. Malva Removal</a></li>
+      </ul>
+    </nav>
+
+    <section id="buy-flat">
+      <h2>1. When You Buy a Flat</h2>
+      <ul>
+        <li>Fill and submit <a class="form-link" href="forms/flat_sale.pdf" target="_blank">Noc flat sale form</a> along with:</li>
         <li>Obtain NOC from Society: Pay 0.5% + GST of the flat purchase price (Sale Agreement or registry) as per UP Apartment Act.</li>
-        <li>Get AOA membership:</li>
-        <ul>
-          <li>Fill and submit <strong>Form B</strong> along with:</li>
+        <li>Get AOA membership:  
           <ul>
-            <li>First three pages of registry (front & back).</li>
-            <li>One photograph.</li>
-            <li>Membership fees of ₹1,000 by cheque or cash (collect receipt).</li>
+            <li>Fill and submit <a class="form-link" href="forms/AOA_membership.pdf" target="_blank">Form B</a> along with:</li>
+            <ul>
+              <li>First three pages of registry (front & back).</li>
+              <li>One photograph.</li>
+              <li>Membership fees of ₹1,000 by cheque or cash (collect receipt).</li>
+            </ul>
           </ul>
-        </ul>
+        </li>
       </ul>
     </section>
 
-    <section>
-      <h2>When You Rent an Apartment</h2>
+    <section id="rent-flat">
+      <h2>2. When You Rent an Apartment</h2>
       <ul>
-        <li>Collect Tenant Entry Form from office.</li>
+        <li>Fill Tenant Entry Form: <a class="form-link" href="forms/tenant.pdf" target="_blank">Tenant Entry Form</a></li>
         <li>Pay tenant entry fees of ₹1,500 + GST.</li>
         <li>Submit:</li>
         <ul>
@@ -50,15 +72,16 @@
           <li>Student or work ID (if applicable).</li>
         </ul>
         <li>Police verification mandatory (with dealer stamp if applicable).</li>
-        <li>Bachelor tenants must submit an affidavit on stamp paper stating they will not create nuisance; RWA may terminate agreement or enforce vacation if violated.</li>
+        <li>Bachelor tenants must submit an affidavit on stamp paper; RWA may terminate agreement or enforce vacation if violated.</li>
       </ul>
     </section>
 
-    <section>
-      <h2>Somebody Leaving the Society</h2>
+    <section id="Shifting/leaving outside society">
+      <h2>4. Somebody Leaving the Society</h2>
       <ul>
         <li><strong>If a renter vacates the property:</strong>
           <ul>
+            <li>Fill the <a class="form-link" href="forms/shifting.pdf" target="_blank">NOC shifting form</a>.</li>
             <li>Obtain NOC from maintenance office (clear all dues).</li>
             <li>Submit NOC form to RWA office with Aadhar copy.</li>
           </ul>
@@ -72,10 +95,10 @@
       </ul>
     </section>
 
-    <section>
-      <h2>Work Permit in the Flat</h2>
+    <section id="work-permit-flat">
+      <h2>5. Work Permit in the Flat</h2>
       <ul>
-        <li>Collect Work Permit & Contractor forms from society office.</li>
+        <li>Fill <a class="form-link" href="forms/Work_permit.pdf" target="_blank">Work Permit Form</a></li>
         <li>Deposit security money:</li>
         <ul>
           <li>₹10,000 for ground-floor civil work.</li>
@@ -91,8 +114,23 @@
       </ul>
     </section>
 
-    <section>
-      <h2>Security Refund</h2>
+    <section id="block-work-permit">
+      <h2>6. Work Permit in the Block Building</h2>
+      <ul>
+        <li>Obtain signatures from at least eight residents in the building.</li>
+        <li>Submit signed application to RWA office.</li>
+      </ul>
+    </section>
+
+    <section id="maid-pass">
+      <h2>7. Maid Pass</h2>
+      <ul>
+        <li>Maid pass issued only upon submission of valid police verification.</li>
+      </ul>
+    </section>
+
+    <section id="security-refund">
+      <h2>8. Security Refund</h2>
       <ul>
         <li>Security deposit refund is subject to:</li>
         <ul>
@@ -104,26 +142,11 @@
       </ul>
     </section>
 
-    <section>
-      <h2>Malva Removal</h2>
+    <section id="malva-removal">
+      <h2>9. Malva Removal</h2>
       <ul>
         <li>Malva removal is owner’s responsibility.</li>
         <li>Failure to remove leads to a charge of ₹500 + GST per tractor.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Work Permit in the Block Building</h2>
-      <ul>
-        <li>Obtain signatures from at least eight residents in the building.</li>
-        <li>Submit signed application to RWA office.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Maid Pass</h2>
-      <ul>
-        <li>Maid pass issued only upon submission of valid police verification.</li>
       </ul>
     </section>
 
