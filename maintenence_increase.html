@@ -32,10 +32,15 @@
       margin-bottom: 1.2em;
       line-height: 1.4;
     }
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+      margin-bottom: 1.5em;
+    }
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-bottom: 1.5em;
+      min-width: 800px;
     }
     thead th {
       background: #31708f;
@@ -43,6 +48,7 @@
       padding: 0.8em;
       font-weight: normal;
       text-align: center;
+      white-space: nowrap;
     }
     tbody tr:nth-child(odd) {
       background: #f7f9fc;
@@ -54,14 +60,13 @@
       padding: 0.6em;
       border: 1px solid #d1dbe5;
       text-align: center;
+      white-space: nowrap;
     }
-    /* Accent for increase columns */
     .inc-col {
       background: #eb9532;
       color: #fff;
       font-weight: bold;
     }
-    /* Highlight the 0.30 row */
     .highlight-row {
       background: #fcf8e3 !important;
     }
@@ -69,14 +74,12 @@
       background: #fcf8e3;
       border-left: 6px solid #f39c12;
       padding: 0.8em;
-      margin-top: 0;
       border-radius: 4px;
     }
     @media (max-width: 600px) {
-      thead th, td {
-        font-size: 0.85em;
-        padding: 0.4em;
-      }
+      body { padding: 0.5em; }
+      .container { padding: 1em; }
+      thead th, td { font-size: 0.8em; padding: 0.4em; }
     }
   </style>
 </head>
@@ -85,75 +88,156 @@
     <h1>Maintenance Hike Impact Report</h1>
     <p class="summary">
       <strong>Current situation:</strong><br/>
-      • Windsor flats: 1,429 × 950 sqft = 1,357,550 sqft<br/>
-      • Nova flats: 1,115 × 760 sqft = 847,400 sqft<br/>
-      • Total billed area: 2,204,950 sqft<br/>
+      • Windsor flats: 1,429 × 950 sqft = 1,357,550 sqft<br/>
+      • Nova flats: 1,115 × 760 sqft = 847,400 sqft<br/>
+      • Total billed area: 2,204,950 sqft<br/>
       • Current rate: ₹1.00/sqft ⇒ ₹2,204,950/month ⇒ ₹26,459,400/year
     </p>
 
     <h2>Projected Collections by Hike</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>↑₹/sqft</th>
-          <th>Windsor Rate<br>(₹/sqft)</th>
-          <th>Windsor<br>Monthly</th>
-          <th>Windsor<br>Annual</th>
-          <th>Nova Rate<br>(₹/sqft)</th>
-          <th>Nova<br>Monthly</th>
-          <th>Nova<br>Annual</th>
-          <th>Total<br>Monthly</th>
-          <th>Total<br>Annual</th>
-          <th class="inc-col">Monthly<br>Increase</th>
-          <th class="inc-col">Annual<br>Increase</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>0.10</td><td>1.10</td><td>1,493,305</td><td>17,919,660</td>
-          <td>1.10</td><td>932,140</td><td>11,185,680</td>
-          <td>2,425,445</td><td>29,105,340</td><td class="inc-col">220,495</td><td class="inc-col">2,645,940</td>
-        </tr>
-        <tr>
-          <td>0.20</td><td>1.20</td><td>1,629,060</td><td>19,548,720</td>
-          <td>1.20</td><td>1,016,880</td><td>12,202,560</td>
-          <td>2,645,940</td><td>31,751,280</td><td class="inc-col">440,990</td><td class="inc-col">5,291,880</td>
-        </tr>
-        <tr class="highlight-row">
-          <td>0.30</td><td>1.30</td><td>1,764,815</td><td>21,177,780</td>
-          <td>1.30</td><td>1,101,620</td><td>13,219,440</td>
-          <td>2,866,435</td><td>34,397,220</td><td class="inc-col">661,485</td><td class="inc-col">7,937,820</td>
-        </tr>
-        <tr>
-          <td>0.25</td><td>1.25</td><td>1,696,938</td><td>20,363,250</td>
-          <td>1.25</td><td>1,059,250</td><td>12,711,000</td>
-          <td>2,756,188</td><td>33,074,250</td><td class="inc-col">551,238</td><td class="inc-col">6,614,850</td>
-        </tr>
-        <tr>
-          <td>0.35</td><td>1.35</td><td>1,832,693</td><td>21,992,316</td>
-          <td>1.35</td><td>1,143,990</td><td>13,727,880</td>
-          <td>2,976,683</td><td>35,720,196</td><td class="inc-col">771,733</td><td class="inc-col">9,260,796</td>
-        </tr>
-        <tr>
-          <td>0.40</td><td>1.40</td><td>1,900,570</td><td>22,806,840</td>
-          <td>1.40</td><td>1,186,360</td><td>14,236,320</td>
-          <td>3,086,930</td><td>37,043,160</td><td class="inc-col">881,980</td><td class="inc-col">10,583,760</td>
-        </tr>
-        <tr>
-          <td>0.45</td><td>1.45</td><td>1,968,448</td><td>23,621,376</td>
-          <td>1.45</td><td>1,228,730</td><td>14,744,760</td>
-          <td>3,197,178</td><td>38,366,136</td><td class="inc-col">992,228</td><td class="inc-col">11,906,736</td>
-        </tr>
-        <tr>
-          <td>0.50</td><td>1.50</td><td>2,036,325</td><td>24,435,900</td>
-          <td>1.50</td><td>1,271,100</td><td>15,253,200</td>
-          <td>3,307,425</td><td>39,689,100</td><td class="inc-col">1,102,475</td><td class="inc-col">13,229,700</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>↑₹/sqft</th>
+            <th>Windsor Rate<br>(₹/sqft)</th>
+            <th>Windsor Charge<br>per Flat</th>
+            <th>Windsor<br>Monthly Total</th>
+            <th>Windsor<br>Annual Total</th>
+            <th>Nova Rate<br>(₹/sqft)</th>
+            <th>Nova Charge<br>per Flat</th>
+            <th>Nova<br>Monthly Total</th>
+            <th>Nova<br>Annual Total</th>
+            <th>Total<br>Monthly</th>
+            <th>Total<br>Annual</th>
+            <th class="inc-col">Monthly<br>Increase</th>
+            <th class="inc-col">Annual<br>Increase</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0.00</td><td>1.00</td><td>₹950</td><td>1,357,550</td><td>16,290,600</td>
+            <td>1.00</td><td>₹760</td><td>847,400</td><td>10,168,800</td>
+            <td>2,204,950</td><td>26,459,400</td>
+            <td class="inc-col">₹0</td><td class="inc-col">₹0</td>
+          </tr>
+          <tr>
+            <td>0.10</td><td>1.10</td><td>₹1,045</td><td>1,493,305</td><td>17,919,660</td>
+            <td>1.10</td><td>₹836</td><td>932,140</td><td>11,185,680</td>
+            <td>2,425,445</td><td>29,105,340</td>
+            <td class="inc-col">₹220,495</td><td class="inc-col">₹2,645,940</td>
+          </tr>
+          <tr>
+            <td>0.20</td><td>1.20</td><td>₹1,140</td><td>1,629,060</td><td>19,548,720</td>
+            <td>1.20</td><td>₹912</td><td>1,016,880</td><td>12,202,560</td>
+            <td>2,645,940</td><td>31,751,280</td>
+            <td class="inc-col">₹440,990</td><td class="inc-col">₹5,291,880</td>
+          </tr>
+          <tr class="highlight-row">
+            <td>0.30</td><td>1.30</td><td>₹1,235</td><td>1,764,815</td><td>21,177,780</td>
+            <td>1.30</td><td>₹988</td><td>1,101,620</td><td>13,219,440</td>
+            <td>2,866,435</td><td>34,397,220</td>
+            <td class="inc-col">₹661,485</td><td class="inc-col">₹7,937,820</td>
+          </tr>
+          <tr>
+            <td>0.25</td><td>1.25</td><td>₹1,187.50</td><td>1,696,938</td><td>20,363,250</td>
+            <td>1.25</td><td>₹950</td><td>1,059,250</td><td>12,711,000</td>
+            <td>2,756,188</td><td>33,074,250</td>
+            <td class="inc-col">₹551,238</td><td class="inc-col">₹6,614,850</td>
+          </tr>
+          <tr>
+            <td>0.35</td><td>1.35</td><td>₹1,282.50</td><td>1,832,693</td><td>21,992,316</td>
+            <td>1.35</td><td>₹1,026</td><td>1,143,990</td><td>13,727,880</td>
+            <td>2,976,683</td><td>35,720,196</td>
+            <td class="inc-col">₹771,733</td><td class="inc-col">₹9,260,796</td>
+          </tr>
+          <tr>
+            <td>0.40</td><td>1.40</td><td>₹1,330</td><td>1,900,570</td><td>22,806,840</td>
+            <td>1.40</td><td>₹1,064</td><td>1,186,360</td><td>14,236,320</td>
+            <td>3,086,930</td><td>37,043,160</td>
+            <td class="inc-col">₹881,980</td><td class="inc-col">₹10,583,760</td>
+          </tr>
+          <tr>
+            <td>0.45</td><td>1.45</td><td>₹1,377.50</td><td>1,968,448</td><td>23,621,376</td>
+            <td>1.45</td><td>₹1,102</td><td>1,228,730</td><td>14,744,760</td>
+            <td>3,197,178</td><td>38,366,136</td>
+            <td class="inc-col">₹992,228</td><td class="inc-col">₹11,906,736</td>
+          </tr>
+          <tr>
+            <td>0.50</td><td>1.50</td><td>₹1,425</td><td>2,036,325</td><td>24,435,900</td>
+            <td>1.50</td><td>₹1,140</td><td>1,271,100</td><td>15,253,200</td>
+            <td>3,307,425</td><td>39,689,100</td>
+            <td class="inc-col">₹1,102,475</td><td class="inc-col">₹13,229,700</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>New Per-Flat Charges by Rate</h2>
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>↑₹/sqft</th>
+            <th>New Rate<br>(₹/sqft)</th>
+            <th>Windsor<br>Per-Flat Charge (₹)</th>
+            <th class="inc-col">Windsor<br>Increase (₹)</th>
+            <th>Nova<br>Per-Flat Charge (₹)</th>
+            <th class="inc-col">Nova<br>Increase (₹)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0.00</td><td>1.00</td>
+            <td>₹950</td><td class="inc-col">₹0</td>
+            <td>₹760</td><td class="inc-col">₹0</td>
+          </tr>
+          <tr>
+            <td>0.10</td><td>1.10</td>
+            <td>₹1,045</td><td class="inc-col">₹95</td>
+            <td>₹836</td><td class="inc-col">₹76</td>
+          </tr>
+          <tr>
+            <td>0.20</td><td>1.20</td>
+            <td>₹1,140</td><td class="inc-col">₹190</td>
+            <td>₹912</td><td class="inc-col">₹152</td>
+          </tr>
+          <tr class="highlight-row">
+            <td>0.30</td><td>1.30</td>
+            <td>₹1,235</td><td class="inc-col">₹285</td>
+            <td>₹988</td><td class="inc-col">₹228</td>
+          </tr>
+          <tr>
+            <td>0.25</td><td>1.25</td>
+            <td>₹1,187.50</td><td class="inc-col">₹237.50</td>
+            <td>₹950</td><td class="inc-col">₹190</td>
+          </tr>
+          <tr>
+            <td>0.35</td><td>1.35</td>
+            <td>₹1,282.50</td><td class="inc-col">₹332.50</td>
+            <td>₹1,026</td><td class="inc-col">₹266</td>
+          </tr>
+          <tr>
+            <td>0.40</td><td>1.40</td>
+            <td>₹1,330</td><td class="inc-col">₹380</td>
+            <td>₹1,064</td><td class="inc-col">₹304</td>
+          </tr>
+          <tr>
+            <td>0.45</td><td>1.45</td>
+            <td>₹1,377.50</td><td class="inc-col">₹427.50</td>
+            <td>₹1,102</td><td class="inc-col">₹342</td>
+          </tr>
+          <tr>
+            <td>0.50</td><td>1.50</td>
+            <td>₹1,425</td><td class="inc-col">₹475</td>
+            <td>₹1,140</td><td class="inc-col">₹380</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <div class="callout">
-      🔶 At a <strong>₹0.30/sqft</strong> increase we’d collect <strong>₹661,485/month</strong> more (₹7,937,820/year), which should cover our current deficit comfortably.
+      🔶 At a <strong>₹0.30/sqft</strong> increase you’d collect <strong>₹661,485/month</strong> more (₹7,937,820/year), which should cover your current deficit comfortably.
     </div>
   </div>
 </body>
