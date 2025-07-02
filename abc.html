@@ -1,0 +1,33 @@
+---
+layout: none
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Files in This Folder</title>
+  <style>
+    body { font-family: Arial,sans-serif; padding:1rem; }
+    ul { list-style: none; padding:0; }
+    li { margin:.25rem 0; }
+    a { color:#1a0dab; text-decoration:none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>Files in This Folder</h1>
+  <ul>
+    {% assign prefix = page.path | remove: 'index.html' %}
+    {% for f in site.static_files %}
+      {% if f.path startswith prefix %}
+        {% assign name = f.path | remove: prefix %}
+        {% unless name == "" or name endswith "/" %}
+          <li><a href="{{ name }}">{{ name }}</a></li>
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+</body>
+</html>
